@@ -58,7 +58,10 @@ def main():
 
         elif caesarOrPoly == 2:
             print("Poly Encrypt")
-            #security(PolyEncrypt(userFileContent))
+            encryptedContent = PolyEncrypt(userFileContent)
+
+            writeToFile = open("Polysub_encrypted.txt","w")
+            writeToFile.write(encryptedContent)
         else:                           #This goes to the default of going back up to selecting a file. If the user enters 3 or any other input it will default here
             correctFile = False
             main()
