@@ -1,7 +1,7 @@
 # In  main.py you need to read a string from the user as the original file name. 
 # Then you need to open the file to read all the contents and store the content into a variable. 
 # Next you need to check if the user wants to either encrypt or decrypt the file.
-import security
+from security import *
 from tkinter import Tk
 from tkinter.filedialog import askopenfilename  #This enables the user to use a GUI to select the file that is wanted to be encrypted. 
                                                 #The reasoning for all of this is outlined in the strategy plan  
@@ -49,9 +49,13 @@ def main():
         caesarOrPoly = int(input('\n\nWhich type of encryption would you like to use;\n1) Caesar\n2) Polyalphabetic\n'))
                                         #caesarOrPoly is used for selecting Encryption AND Decryption methods. It is assigned above, so will not break if another file is going to be chosen. 
 
-        if caesarOrPoly == 1:   
+        if caesarOrPoly == 1:
             print("User has selected the Caesar Encryption method")
-            #security(CaesarEncrypt(userFileContent) This will be added later on when security.py has been written For now it is just commented out. The same thing can be seen below. 
+            encryptedContent = CaesarEncrypt(userFileContent)          #encryptedContent becomes the encrypted version of the content of the selected file using the Caesar Method
+
+            writeToFile = open("Caesar_Encrypted.txt", "w")            #Creates a file named EncryptedText.txt, or overwrites if the file already exists.
+            writeToFile.write(encryptedContent)                        #The text contained within the newly created textfile is then written as the Encrypted content
+
         elif caesarOrPoly == 2:
             print("Poly Encrypt")
             #security(PolyEncrypt(userFileContent))
