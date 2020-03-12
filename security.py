@@ -56,3 +56,15 @@ def CaesarDecrypt(Content):         #The Caesar decryption process is very simil
         decryptedText += str(letter)
 
     return decryptedText          #This returns the decrypted text to main.py. 
+
+
+def PolyDecrypt(Content):       #Just like with the Caesar decryption, this code is essentially the same as the encryption function, however just by  reversing the index of the passphrase/key
+    i = 0
+    encryptedText = '' 
+    polyKey = input("What is the key/passphase that you want to use with the Polyalphabetic decryption: ")
+    polyKey *= len(Content)
+    for letter in Content: 
+        encryptedLetter = alphabet[(alphabet.index(letter) + -alphabet.index(polyKey[i])) % len(alphabet)]  #The only change is on this line, where the key is reversed ' -alphabet.index(polykey[i])
+        encryptedText += str(encryptedLetter)
+        i += 1                  #The rest of this function remains the same, and can be condensed down
+    return encryptedText
