@@ -51,10 +51,10 @@ def main():
 
         if caesarOrPoly == 1:
             print("User has selected the Caesar Encryption method")
-            encryptedContent = CaesarEncrypt(userFileContent)       #encryptedContent becomes the encrypted version of the content of the selected file using the Caesar Method
+            encryptedContent = CaesarEncrypt(userFileContent)          #encryptedContent becomes the encrypted version of the content of the selected file using the Caesar Method
 
-            writeToFile = open("EncryptedText.txt", "w")            #Creates a file named EncryptedText.txt, or overwrites if the file already exists.
-            writeToFile.write(encryptedContent)                     #The text contained within the newly created textfile is then written as the Encrypted content
+            writeToFile = open("Caesar_Encrypted.txt", "w")            #Creates a file named EncryptedText.txt, or overwrites if the file already exists.
+            writeToFile.write(encryptedContent)                        #The text contained within the newly created textfile is then written as the Encrypted content
 
         elif caesarOrPoly == 2:
             print("Poly Encrypt")
