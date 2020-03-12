@@ -37,3 +37,22 @@ def PolyEncrypt(fileContent):
         encryptedText += str(encryptedLetter)
         i += 1                   #Iterates up through the faux counter variable in the for loop so that the keyword changes per letter. 
     return encryptedText
+
+
+def CaesarDecrypt(Content):         #The Caesar decryption process is very similar to the encryption process, only that it does it backwards (Decrypts it). To do this in code it's fairly easy, as the shift just needs to be negative.
+                                    #This is why the code here is almost the exact same to the Caesar encryption process
+    decryptedText = ''
+    shiftedAlphabet = {} 
+    
+    userShift = int(input("\n\nPlease enter the shift that you want the text to be decrypted by: "))
+    userShift = userShift
+    for i in range(0, len(alphabet)):
+        letter = alphabet[i]
+        shiftedLetter = alphabet[(i + (-userShift))%len(alphabet)]
+        shiftedAlphabet[letter] = shiftedLetter
+    
+    for letter in Content:
+        letter = shiftedAlphabet[letter]
+        decryptedText += str(letter)
+
+    return decryptedText          #This returns the decrypted text to main.py. 

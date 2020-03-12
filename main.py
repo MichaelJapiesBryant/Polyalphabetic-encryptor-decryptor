@@ -70,7 +70,9 @@ def main():
     elif encryptOrDecrypt == 2:          #Similar to if the user chooses to Encrypt. The user will be prompted here for which Decryption method they want to use.
         caesarOrPoly = int(input('\n\nWhich type of decryption would you like to use; \n1) Caesar Decryption\n2) Polyalphabetic Decryption\n'))
         if caesarOrPoly == 1:
-            print("Caesar Decrypt")
+            decryptedContent = CaesarDecrypt(userFileContent)
+            writeToFile = open("Caesar_Decrypted.txt","w")
+            writeToFile.write(decryptedContent)
         elif caesarOrPoly == 2:
             print("Poly Decrypt")
         else:
