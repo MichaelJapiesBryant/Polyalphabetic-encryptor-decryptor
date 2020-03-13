@@ -74,7 +74,9 @@ def main():
             writeToFile = open("Caesar_Decrypted.txt","w")
             writeToFile.write(decryptedContent)
         elif caesarOrPoly == 2:
-            print("Poly Decrypt")
+            decryptedContent = PolyDecrypt(userFileContent)
+            writeToFile = open("Polyalphabetic_Decrypted.txt","w")
+            writeToFile.write(decryptedContent)
         else:
             correctFile = False
             main()
