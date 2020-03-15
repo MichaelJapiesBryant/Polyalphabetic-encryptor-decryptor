@@ -12,4 +12,4 @@ The features found in this program available to the users are;
 - Ability to decrypt a text file that has already been encrypted using a Vigènere cipher. 
 - File dialog UI enabling the user to select a text file without the need of the command line. 
 
-Created by [Michael Bryant](https://github.com/MichaelJapiesBryant)
+Created by [Michael](https://twitter.com/The_Japies) [ Bryant](https://github.com/MichaelJapiesBryant)
