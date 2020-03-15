@@ -1,7 +1,7 @@
 # In  main.py you need to read a string from the user as the original file name. 
 # Then you need to open the file to read all the contents and store the content into a variable. 
 # Next you need to check if the user wants to either encrypt or decrypt the file.
-from security import *
+from security import Security
 from tkinter import Tk
 from tkinter.filedialog import askopenfilename  #This enables the user to use a GUI to select the file that is wanted to be encrypted. 
                                                 #The reasoning for all of this is outlined in the strategy plan  
@@ -51,14 +51,14 @@ def main():
 
         if caesarOrPoly == 1:
             print("User has selected the Caesar Encryption method")
-            encryptedContent = CaesarEncrypt(userFileContent)          #encryptedContent becomes the encrypted version of the content of the selected file using the Caesar Method
+            encryptedContent = Security().CaesarEncrypt(userFileContent)          #encryptedContent becomes the encrypted version of the content of the selected file using the Caesar Method
 
             writeToFile = open("Caesar_Encrypted.txt", "w")            #Creates a file named EncryptedText.txt, or overwrites if the file already exists.
             writeToFile.write(encryptedContent)                        #The text contained within the newly created textfile is then written as the Encrypted content
 
         elif caesarOrPoly == 2:
             print("Poly Encrypt")
-            encryptedContent = PolyEncrypt(userFileContent)
+            encryptedContent = Security().PolyEncrypt(userFileContent)
 
             writeToFile = open("Polysub_encrypted.txt","w")
             writeToFile.write(encryptedContent)
@@ -70,11 +70,11 @@ def main():
     elif encryptOrDecrypt == 2:          #Similar to if the user chooses to Encrypt. The user will be prompted here for which Decryption method they want to use.
         caesarOrPoly = int(input('\n\nWhich type of decryption would you like to use; \n1) Caesar Decryption\n2) Polyalphabetic Decryption\n'))
         if caesarOrPoly == 1:
-            decryptedContent = CaesarDecrypt(userFileContent)
+            decryptedContent = Security().CaesarDecrypt(userFileContent)
             writeToFile = open("Caesar_Decrypted.txt","w")
             writeToFile.write(decryptedContent)
         elif caesarOrPoly == 2:
-            decryptedContent = PolyDecrypt(userFileContent)
+            decryptedContent = Security().PolyDecrypt(userFileContent)
             writeToFile = open("Polyalphabetic_Decrypted.txt","w")
             writeToFile.write(decryptedContent)
         else:
