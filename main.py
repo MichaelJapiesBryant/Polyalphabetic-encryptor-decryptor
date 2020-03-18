@@ -44,6 +44,8 @@ def main():
     
 
 
+
+
     #User will decide whether or not to encrypt or decrypt here as well as which method (Caesar or Polyalphabetic) they wish to use 
     encryptOrDecrypt = int(input("\n\n Would you like to;\n1) Encrypt the file\n2) Decrpyt the file\n3) Go back\n"))
     if encryptOrDecrypt == 1:   #If the user wants to encrypt the file, they will then be prompted to choose between the Caesar or Polyalphabetic encryption methods. 
