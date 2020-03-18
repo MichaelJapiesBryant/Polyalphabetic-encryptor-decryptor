@@ -20,4 +20,5 @@ The features found in this program available to the users are;
 5. After selecting either encrypting or decrypting, you will be asked if you want to use the **Caesar cipher** or the **Vigènere polyalphabetic cipher**
 6. You will then be asked which key or shift you would like to use on the text file. Once this is chosen, a text file will be created in the root directory of the program named either 'Caesar_Encrypted(decrypted)' or 'Poly_encrypted(decrypted)' with the encrypted (Or decrypted, if that was chosen) text. 
 
+
 Created by [Michael](https://twitter.com/The_Japies) [ Bryant](https://github.com/MichaelJapiesBryant)

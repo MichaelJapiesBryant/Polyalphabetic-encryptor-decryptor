@@ -1,4 +1,4 @@
-import pytest       #Needed for the unit testing  ( ͡• ͜ʖ ͡• )
+import pytest       #Needed for the unit testing 
 from security import Security as Sec
 from io import StringIO
 
