@@ -22,6 +22,7 @@ def main():
         userFile = open(askopenfilename())  #This is an inbuilt function of tkinter that opens a GUI for the user to open a file. This line saves the link to the file in a variable
         userFileContent = userFile.read()   #The read() function reads from the text file previously selected. This saves the content of the selected file as a vairable. 
 
+
         fileValidation = int(input("\n\nThe path to the selected file is: %s\nWould you like to;\n1) Display the contents of the file \n2) Continue\n3) Go back\n"%(userFile.name)))
                                         #fileValidation and the following if statements just confirms with the user whether or not the file is the correct one. 
                                         #Users can choose to either display the content, continue, or if there was a mistake, they can go back and select another file. 
