@@ -12,7 +12,7 @@ The features found in this program available to the users are;
 - Ability to decrypt a text file that has already been encrypted using a Vigènere cipher. 
 - File dialog UI enabling the user to select a text file without the need of the command line. 
 
-##How to use
+## How to use
 1. The first requirement to use the program is to have a text file already written that you wish to encrypt. If a text file has already been encrypted then that can be used as well.
 2. Once starting the program, follow the written prompts to select the text file that you want to have encrypted or decrypted. This is done using a GUI file dialog to find the file.
 3. The program will then prompt as to whether you would like to display the content of the file, continue, or go back. What these options does is fairly self explanitory. 
