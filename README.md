@@ -1,6 +1,6 @@
 # Text encryption using Caesar and Polyalphabetic ciphers
 
-###This project was created for an assignment
+### This project was created for an assignment
 The purpose of this assignment is to create a program that can encrypt and decrypt text files using at least *two* encryption methods. The two encryption methods built into the program are the **Caesar cipher** and **Vigènere cipher** encryption methods. As well as being able to encrypt a text file, the program will also be able to decrypt a text file that has already been encrypted with either one of the above mentioned ciphers. 
 
 These two encryption methods are a relavitvely lightweight and effective way to encrypt files. While not the most secure, they still provide some security and will successfully encrypt any text files (Providing that they contain English text. Punctuation and numbers are also encrypted.).
